@@ -1,0 +1,13 @@
+<!--pages/chooseSong/chooseSong.wxml-->
+<radio-group class="radio-group" bindchange="radioChange">
+	<view class='musicList'>
+		<label class="radio" wx:for="{{songList}}" data-index='{{ index }}' wx:key="{{ item }}" bindtap='changeIcon'>
+			<view class='musicListItem flexBox'>
+				<view class='radio'>
+					<radio value="{{item.songName}}" checked="{{item.checked}}" hidden='true' />{{item.songName}}
+				</view>
+				<image src='/imgs/selectIcon.png' hidden='{{ item.checked == true ? false : true }}'></image>
+			</view>
+		</label>
+	</view>
+</radio-group>

@@ -1,0 +1,74 @@
+<!--pages/configure/configure.wxml-->
+<view class='container'>
+	<view class='mainTitle'>哄睡</view>
+	<view class='section'>
+		<view class='sectionTitle'>哄睡音乐</view>
+		<view class='sliderBox'>
+			<text>音量</text>
+			<slider backgroundColor='#D8D8D8' activeColor='#4E4E4E'></slider>
+		</view>
+		<view class='menu'>
+			<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/chooseSong/chooseSong'>
+				<view class='menuTitle'>选择歌曲</view>
+				<view class='operate'>
+					<text decode='true'>&gt;</text>
+				</view>
+			</view>
+		</view>
+		<view class='optionPane'>
+			<view class='header flexBox'>
+				<view class='headerTitle'>歌曲持续时间</view>
+				<view class='operate'>
+					<text>单位：分钟</text>
+				</view>
+			</view>
+			<view class='optionBox'>
+				<view class='optionItem'>15</view>
+				<view class='optionItem active'>30</view>
+				<view class='optionItem'>45</view>
+			</view>
+		</view>
+	</view>
+	<view class='section'>
+		<view class='sectionTitle'>助眠灯光</view>
+		<view class='sliderBox'>
+			<text>亮度</text>
+			<slider backgroundColor='#D8D8D8' activeColor='#4E4E4E'></slider>
+		</view>
+		<view class='label'>请将灯光调在合适的亮度 亮度过高的灯光不利于婴儿入睡</view>
+		<view class='optionPane'>
+			<view class='header flexBox'>
+				<view class='headerTitle'>灯光持续时间</view>
+				<view class='operate'>
+					<text>单位：分钟</text>
+				</view>
+			</view>
+			<view class='optionBox'>
+				<view class='optionItem'>15</view>
+				<view class='optionItem active'>30</view>
+				<view class='optionItem'>45</view>
+			</view>
+		</view>
+	</view>
+	<view class='section'>
+		<view class='sectionTitle'>哄睡摇摆</view>
+		<view class='sliderBox' style='margin-bottom: 0;'>
+			<text>速度</text>
+			<slider backgroundColor='#D8D8D8' activeColor='#4E4E4E'></slider>
+		</view>
+		<view class='optionPane'>
+			<view class='header flexBox'>
+				<view class='headerTitle'>摇摆持续时间</view>
+				<view class='operate'>
+					<text>单位：分钟</text>
+				</view>
+			</view>
+			<view class='optionBox'>
+				<view class='optionItem'>15</view>
+				<view class='optionItem active'>30</view>
+				<view class='optionItem'>45</view>
+			</view>
+		</view>
+	</view>
+	<view class='saveBtn'>保存场景</view>
+</view>

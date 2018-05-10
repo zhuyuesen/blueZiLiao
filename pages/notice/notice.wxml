@@ -1,0 +1,18 @@
+<!--pages/notice/notice.wxml-->
+<view class='container'>
+	<view class='noticeTotal'>共{{ list.length }}条通知</view>
+	<view class="item-box">
+		<view class="items">
+			<view wx:for="{{list}}" wx:key="{{index}}" class="item">
+				<view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt">
+					<view class='header flexBox'>
+						<view class='title {{ item.iconClass }}'>{{ item.title }}</view>
+						<view class='noticeTime'>{{ item.noticeTime }}</view>
+					</view>
+					<view class='noticeText'>{{ item.txt }}</view>
+				</view>
+				<view data-index="{{index}}" bindtap="delItem" class="inner del">删除</view>
+			</view>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,152 @@
+/* pages/controler/controler.wxss */
+page{
+	background-color: #FFF;
+	color: #3E3849;
+}
+.wx-slider-handle{
+	 /* width: 30rpx !important;
+	height: 30rpx !important;  */
+	background-color: #FF3489 !important;
+	/* position: relative;
+	top: 17rpx !important;
+	left: 16rpx; */
+	box-shadow: 0;
+}
+.box{
+	color: #FF3489;
+	background-color: #FFF;
+	border-radius: 30rpx;
+	box-sizing: border-box;
+	margin-top: 20rpx;
+	border: 4rpx solid #FF8DBD;
+}
+.box .title{
+	font-size: 24rpx;
+	text-align: center;
+	margin-top: 34rpx;
+}
+.videoBox{
+	width: 162rpx;
+	height: 162rpx;
+	text-align: center;
+	padding: 34rpx;
+}
+.videoBox image{
+	width: 94rpx;
+	height: 94rpx;
+}
+.musicBox{
+	width: 526rpx;
+	height: 162rpx;
+	line-height: 162rpx;
+}
+.musicBox .title{
+	display: inline-block;
+	margin-left: 32rpx;
+	margin-top: 0;
+	position: relative;
+	bottom: 6rpx;
+}
+.musicBox .playBtn{
+	width: 32rpx;
+	height: 42rpx;
+	margin-left: 28rpx;
+	position: relative;
+	top: 7rpx; 
+}
+.musicBox .nextBtn{
+	width: 22rpx;
+	height: 28rpx;
+	line-height: 42rpx;
+	margin-left: 32rpx;
+	position: relative;
+	 bottom: 1rpx; 
+}
+.musicBox slider{
+	width: 200rpx;
+	display: inline-block;
+	margin: 0;
+	margin-left: 42rpx;
+	position: relative;
+	bottom: 17rpx;
+}
+.lightBox{
+	width: 344rpx;
+	height: 344rpx;
+}
+.selectBox{
+	width: 300rpx;
+	height: 48rpx;
+	box-sizing: border-box;
+	font-size: 20rpx;
+	color: #3E3849;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 36rpx;
+	position: relative;
+	border-radius: 14rpx;
+}
+.lightBox slider{
+	width: 222rpx;
+	margin: 0 auto;
+	margin-top: 44rpx;
+}
+.label{
+	color: #191919;
+	font-size: 20rpx;
+	padding: 50rpx 54rpx 40rpx 22rpx;
+	display: flex;
+}
+.label .icon{
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #FF5757;
+	display: inline-block;
+	margin-right: 20rpx;
+}
+
+.tempBox{
+	width: 162rpx;
+	height: 162rpx;
+	text-align: center;
+	box-sizing: border-box;
+}
+.tempBox .tempData{
+	font-size: 44rpx;
+}
+.humidityBox{
+	width: 344rpx;
+	height: 162rpx;
+	text-align: center;
+	box-sizing: border-box;
+}
+.humidityBox .humidityData{
+	display: flex;
+	padding: 32rpx 0;
+	justify-content: center;
+}
+.humidityBox .humidityData .circle{
+	width: 28rpx;
+	height: 28rpx;
+	border-radius: 50%;
+	border: 1rpx solid #ccc;
+	margin: 0 20rpx;
+}
+.humidityBox .humidityData .noActive{
+	background-color: #CCC !important;
+}
+.switchBox{
+	width: 162rpx;
+	height: 162rpx;
+	text-align: center;
+	box-sizing: border-box;
+}
+.switchBox switch{
+	margin-top: 76rpx;
+}
+
+.menu .menuItem{
+	border-top: 1rpx solid #B4B4B4;
+	border-bottom: 1rpx solid #B4B4B4;
+}

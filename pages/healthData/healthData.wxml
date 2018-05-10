@@ -1,0 +1,57 @@
+<!--pages/healthData/healthData.wxml-->
+<view class='container'>
+	<view class='selectBox'>
+		<view class='option'>
+			<text class='{{ item.dataType == selectIndex ? "active" : "" }}' wx:for='{{ healthData }}' wx:key='{{ item }}' data-data-type='{{ item.dataType }}' bindtap='changeIndex'>{{ item.dataTitle }}</text>
+		</view>
+	</view>
+	<view class='mainContent' wx:for='{{ healthData }}' wx:key='{{ item }}' wx:if='{{ item.dataType == selectIndex }}'>
+		<view class='header flexBox section'>
+			<view class='title'>{{ item.dataTitle }}
+				<text class='unit'>{{ item.unit }}</text>
+			</view>
+			<view class='dataDate'>{{ today }}</view>
+		</view>
+
+		<!-- 体温柱状图 -->
+		<canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler" wx:if="{{ selectIndex == 'temperature' }}"></canvas>
+		<!-- 尿量表格 -->
+		<view class='table' wx:if="{{ selectIndex == 'urineVolume' }}">
+			<block wx:if="{{ humidityArr.length != 0 }}">
+				<view class='row'>
+					<view class='col'>序号</view>
+					<view class='col'>时间</view>
+					<view class='col'>操作</view>
+				</view>
+				<view class='row' wx:for="{{ humidityArr }}" wx:key="{{ item }}">
+					<view class='col'>{{ index + 1 }}</view>
+					<view class='col'>{{ item.time }}</view>
+					<view class='col'>{{ item.operation }}</view>
+				</view>
+			</block>
+			<view class='row'  wx:if="{{ humidityArr.length == 0 }}" >
+				<view class='col'>暂无更多数据</view>
+			</view>
+		</view>
+
+		<view class='section'>
+			<view class='title'>{{ item.intro.introTitle }}</view>
+			<view class='dataIntro flexBox' wx:for='{{ item.intro.introData }}' wx:for-item='introItem' wx:key='{{ introItem }}'>
+				<view class='introTitle'>
+					<image src='{{ introItem.icon }}' class='introIcon'></image>
+					{{ introItem.title }}
+				</view>
+				<view class='introData'>{{ introItem.data }}</view>
+			</view>
+			<view class='introLabel'>{{ item.intro.label }}</view>
+		</view>
+	</view>
+	<view class='menu'>
+		<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/notice/notice'>
+			<view class='menuTitle'>历史数据</view>
+			<view class='operate'>
+				<image src='/imgs/moreIcon2.png'></image>
+			</view>
+		</view>
+	</view>
+</view>

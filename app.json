@@ -1,0 +1,19 @@
+{
+  "pages": [
+		"pages/controler_pink/controler_pink",
+		"pages/controler/controler",
+		"pages/healthData/healthData",
+		"pages/setting/setting",
+		"pages/myDevices/myDevices",
+    "pages/configure/configure",
+    "pages/chooseSong/chooseSong",
+    "pages/notice/notice",
+    "pages/vedio/vedio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "IPM母婴智能",
+    "navigationBarTextStyle": "black"
+  }
+}

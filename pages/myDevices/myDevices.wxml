@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+	<view hidden="{{ pageState == 'view' ? false : true }}">
+		<view class='noDevices' hidden="{{ hasDevices == true ? true : false}}">
+			{{ noticeText }}
+		</view>
+		<view class='hasDevices listBox' hidden="{{ hasDevices == false ? true : false}}">
+			<view class='header'>
+				<view class='title'>已连接</view>
+				<view class='connectCount'>共2个</view>
+			</view>
+			<view class='list'>
+				<view class='listItem flexBox'>
+					<image src='/imgs/deviceIcon1.png'></image>
+					<view class='listMsg flexBox'>
+						<view class='listName'>婴儿床</view>
+						<view class='listState connecting'>连接中</view>
+					</view>
+				</view>
+				<view class='listItem flexBox'>
+					<image src='/imgs/deviceIcon2.png'></image>
+					<view class='listMsg flexBox'>
+						<view class='listName'>尿不湿</view>
+						<view class='listState connected'>断开</view>
+					</view>
+				</view>
+			</view>
+
+			<view class='header'>
+				<view class='historyConnectTitle'>历史连接</view>
+			</view>
+			<view class='list'>
+				<view class='listItem flexBox'>
+					<image src='/imgs/deviceIcon3.png'></image>
+					<view class='listMsg flexBox'>
+						<view class='listName'>床垫</view>
+						<view class='listState'>连接</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class='findNewDevices'>
+			<view class='label'>连接新设备</view>
+			<button class='connectBtn' hover-class='connectBtnHover' bindtap='searchbluetooth'>
+				<image src='/imgs/add.png'></image>
+			</button>
+		</view>
+	</view>
+
+
+	<view hidden="{{ pageState == 'searching' ? false : true }}">
+		<view class='searching' hidden='{{ devices.length == 0 ? false : true }}'>
+			<image src='loading' src='/imgs/loading.png'></image>
+			<view class='label' bindtap='getBluetoothDevices'>搜索中</view>
+		</view>
+		<view class='searchResult listBox' hidden='{{ devices.length == 0 ? true : false }}'>
+			<view class='header'>
+				<view class='title'>搜索结果</view>
+				<view class='connectCount'>共{{ devices.length }}个</view>
+			</view>
+			<view class='list'>
+				<view class='listItem flexBox' wx:for="{{ devices }}" wx:key="{{ item }}">
+					<image src='/imgs/deviceIcon1.png'></image>
+					<view class='listMsg flexBox'>
+						<view class='listName'>{{ item[index].localName }}</view>
+						<view class='listState' data-device-id='{{ item[index].deviceId }}' bindtap='createBLEConnection'>连接</view>
+					</view>
+				</view>
+				<!-- <view class='listItem flexBox'>
+					<image src='/imgs/deviceIcon2.png'></image>
+					<view class='listMsg flexBox'>
+						<view class='listName'>尿不湿</view>
+						<view class='listState'>连接</view>
+					</view>
+				</view> -->
+			</view>
+		</view>
+		<view class='findNewDevices'>
+			<view class='label'>停止搜索</view>
+			<button class='connectBtn' hover-class='connectBtnHover' bindtap='searchbluetooth'>
+				<image src='/imgs/add.png'></image>
+			</button>
+		</view>
+	</view>
+
+</view>

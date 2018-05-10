@@ -1,0 +1,123 @@
+/* pages/notice/notice.wxss */
+
+view {
+  box-sizing: border-box;
+}
+
+.noticeTotal{
+	font-size: 20rpx;
+	color: #6D6D6D;
+	width: 100%;
+	padding: 26rpx 72rpx;
+}
+
+.item-box {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 40rpx;
+}
+
+.items {
+  width: 100%;
+}
+
+.item {
+  position: relative;
+  border-top: 2rpx solid #eee;
+  height: 180rpx;
+  /* line-height: 180rpx; */
+  overflow: hidden;
+}
+
+.item:last-child {
+  border-bottom: 2rpx solid#eee;
+}
+
+.inner {
+	height: 180rpx;
+  position: absolute;
+  top: 0;
+}
+
+.inner.txt {
+  background-color: #fff;
+  width: 100%;
+  z-index: 5;
+  padding: 0 10rpx;
+  transition: left 0.2s ease-in-out;
+  overflow: hidden;
+	padding-bottom: 24rpx;
+  /* white-space: nowrap;
+  text-overflow: ellipsis; */
+}
+
+.inner.del {
+	font-size: 32rpx;
+  background-color: #FE3824;
+  width: 232rpx;
+  text-align: center;
+	line-height: 180rpx;
+  z-index: 4;
+  right: 0;
+  color: #fff;
+}
+
+.inner .header{
+	justify-content: space-between;
+	padding: 22rpx 26rpx 0;
+}
+.inner .header .title{
+	font-size: 32rpx;
+	color: #1A1A1A;
+	font-weight: bold;
+}
+.inner .header .noticeTime{
+	font-size: 24rpx;
+	color: #191919;
+}
+.inner .noticeText{
+	display: inline-block;
+	font-size: 28rpx;
+	color: #6D6D6D;
+	line-height: 42rpx;
+	padding: 18rpx 52rpx 0 72rpx;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.primary::before{
+	content: '';
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #2170FF;
+	margin-right: 26rpx;
+}
+.info::before{
+	content: '';
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #B4C112;
+	margin-right: 26rpx;
+	
+}
+.warn::before{
+	content: '';
+	display: inline-block;
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #FF4175;
+	margin-right: 26rpx;
+	
+}
+
+/* .item-icon {
+  width: 64rpx;
+  vertical-align: middle;
+  margin-right: 16rpx;
+} */

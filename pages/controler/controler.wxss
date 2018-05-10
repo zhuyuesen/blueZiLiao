@@ -1,0 +1,96 @@
+/* pages/controler/controler.wxss */
+page{
+	background-color: #0D0D0D;
+	color: #fff;
+}
+.wx-slider-handle{
+	width: 30rpx !important;
+	height: 30rpx !important;
+	background-color: #44DB5E !important;
+	position: relative;
+	top: 17rpx !important;
+	left: 16rpx;
+}
+.box{
+	color: #fff;
+	background-color: #171717;
+	border-radius: 30rpx;
+	box-sizing: border-box;
+	margin-top: 20rpx;
+}
+.box .title{
+	font-size: 24rpx;
+	text-align: center;
+	margin-top: 42rpx;
+}
+.videoBox{
+	width: 162rpx;
+	height: 162rpx;
+	text-align: center;
+	padding: 34rpx;
+}
+.videoBox image{
+	width: 94rpx;
+	height: 94rpx;
+}
+.musicBox{
+	width: 526rpx;
+	height: 162rpx;
+	line-height: 162rpx;
+}
+.musicBox .playBtn{
+	width: 32rpx;
+	height: 42rpx;
+	margin-left: 50rpx;
+}
+.musicBox .nextBtn{
+	width: 22rpx;
+	height: 28rpx;
+	line-height: 42rpx;
+	margin-left: 36rpx;
+	position: relative;
+	bottom: 7rpx;
+}
+.musicBox slider{
+	width: 288rpx;
+	display: inline-block;
+	margin: 0;
+	margin-left: 70rpx;
+	position: relative;
+	bottom: 17rpx;
+}
+.lightBox{
+	width: 344rpx;
+	height: 344rpx;
+}
+.selectBox{
+	width: 300rpx;
+	height: 48rpx;
+	box-sizing: border-box;
+	font-size: 20rpx;
+	color: #3E3849;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 36rpx;
+	position: relative;
+	border-radius: 14rpx;
+}
+.lightBox slider{
+	width: 222rpx;
+	margin: 0 auto;
+	margin-top: 44rpx;
+}
+.label{
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 20rpx;
+	padding: 50rpx 54rpx 40rpx 22rpx;
+	display: flex;
+}
+.label .icon{
+	width: 20rpx;
+	height: 20rpx;
+	border-radius: 50%;
+	background-color: #FF5757;
+	display: inline-block;
+	margin-right: 20rpx;
+}

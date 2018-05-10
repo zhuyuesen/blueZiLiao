@@ -1,0 +1,142 @@
+/**app.wxss**/
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.flexBox{
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	flex-direction: row;
+	height: auto;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* 设备列表 */
+.listBox{
+	width: 100%;
+}
+.listBox .header{
+	position: relative;
+	margin: 70rpx 0 60rpx 124rpx;
+}
+.listBox .header .title{
+	font-size: 48rpx;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 1em;
+}
+.listBox .header .connectCount{
+	font-size: 24rpx;
+	color: #7B7B7B;
+	display: inline-block;
+	position: absolute;
+	height: 48rpx;
+	line-height: 48rpx;
+	top: 0;
+	right: 36rpx;
+}
+.list{
+	width: 100%;
+	box-sizing: border-box;
+}
+.listItem{
+	width: 100%;
+	box-sizing: border-box;
+}
+.listItem image{
+	width: 88rpx;
+	height: 88rpx;
+	margin: 0 9rpx;
+}
+.listItem .listMsg{
+	width: 626rpx;
+	border-top: 1rpx solid #E7E7E7;
+	border-bottom: 1rpx solid #E7E7E7;
+	height: 104rpx;
+	line-height: 104rpx;
+	justify-content:space-between;
+}
+.listItem .listMsg .listName{
+	font-size: 32rpx;
+}
+.listItem .listMsg .listState{
+	font-size: 32rpx;
+	width: 162rpx;
+	height: 104rpx;
+	text-align: center;
+}
+.connecting{
+	color: #4AD562;
+}
+.connected{
+	color: #fff;
+	background-color: #FE2851;
+}
+
+/* 菜单列表 */
+.menu{
+	padding-left: 22rpx;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 61rpx;
+}
+.menu .menuItem{
+	font-size: 32rpx;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: space-between;
+	border-top: 1rpx solid rgba(255, 255, 255, 0.4);
+	border-bottom: 1rpx solid rgba(255, 255, 255, 0.4);
+	padding: 28rpx 36rpx 34rpx 0;
+}
+.menu .menuItem .menuTitle{
+	font-weight: bold;
+}
+.menu .menuItem .operate image{
+	width: 16rpx;
+	height: 26rpx;
+	margin-left: 38rpx;
+}
+
+/* 胶囊式选项 */
+.selectBox .option{
+	z-index: 9999;
+	position: relative;
+}
+.selectBox .option text{
+	color: #FF8DBD; 
+	/* color: #000; */
+	width: 100rpx;
+	height: 48rpx;
+	line-height: 48rpx;
+	text-align: center;
+	display: inline-block;
+	box-sizing: border-box;
+	border: 1rpx solid #FF8DBD; 
+	 /* border: 1rpx solid #302E38;  */
+}
+.selectBox .option :nth-child(1){
+	border-top-left-radius: 14rpx;
+	border-bottom-left-radius: 14rpx;
+}
+.selectBox .option :nth-last-child(1){
+	border-top-right-radius: 14rpx;
+	border-bottom-right-radius: 14rpx;
+}
+.selectBox .bg{
+	background-color: #FF3489; 
+	/* background-color: #4AD562; */
+	height: 48rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: inline-block;
+}

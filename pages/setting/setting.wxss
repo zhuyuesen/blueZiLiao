@@ -1,0 +1,60 @@
+/* pages/setting/setting.wxss */
+page{
+	background-color: #FFF8FA;
+	padding-top: 100rpx;
+}
+.menu{
+	/* background-color: #fff; */
+	padding-bottom: 0;
+}
+.menu .menuItem{
+	/* background-color: #fff; */
+	border-bottom: 1rpx solid #D8D8D8;
+}
+.menu .menuItem .menuTitle{
+	font-weight: normal;
+}
+.label{
+	font-size: 20rpx;
+	color: #787878;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 18rpx 44rpx 68rpx 20rpx;
+}
+
+.title{
+	font-size: 24rpx;
+	color: #747474;
+	padding-bottom: 30rpx;
+	border-bottom:1rpx solid #D8D8D8;
+	padding: 0rpx 44rpx 32rpx 20rpx;
+	position: relative;
+}
+.title .unit{
+	position: absolute;
+	right: 44rpx;
+	top: 0;
+}
+.tempLimitControl{
+	font-size: 32rpx;
+	min-height: 1.4em;
+	padding: 22rpx;
+	background-color: #FFF;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	border-bottom:1rpx solid #D8D8D8;
+}
+.tempLimitControl view{
+	margin-bottom: 10rpx;
+	margin-right: 50rpx;
+}
+.tempLimitControl input{
+	font-size:32rpx;
+	display: inline-block;
+	border: 1rpx solid #999;
+	height: 32rpx;
+	overflow: inherit;
+	width: 100rpx;
+	text-align: center;
+}

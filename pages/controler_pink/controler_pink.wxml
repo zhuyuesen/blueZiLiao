@@ -1,0 +1,92 @@
+<!--pages/controler/controler.wxml-->
+<view class='container'>
+	<view class='flexBox'>
+		<view class='videoBox box' bindtap='toPage' data-page-url='/pages/vedio/vedio'>
+			<image src='/imgs/video_pink.png'></image>
+		</view>
+		<view class='tempBox box'>
+			<view class='title'>温度</view>
+			<view class='tempData'>{{ tempStr }}</view>
+		</view>
+		<view class='humidityBox box'>
+			<view class='title'>尿湿状况{{ humidityData == 0 ? "（无）" : "（有）" }}</view>
+			<view class='humidityData'>
+				<view class='circle {{ humidityData == 0 ? "" : "noActive" }}' style='background-color: #00FF00;'></view>
+				<view class='circle {{ humidityData == 1 ? "" : "noActive" }}' style='background-color: #FFFF00;'></view>
+				<view class='circle {{ humidityData == 2 ? "" : "noActive" }}' style='background-color: #FF0000;'></view>
+			</view>
+		</view>
+		<view class='switchBox box'>
+			 <switch color='#FF3489' catchtap='quickRun' /> 
+		</view>
+		<view class='musicBox box'>
+			<text class='title'>哄睡音乐</text>
+			<image class='playBtn' src='/imgs/pause_pink.png'></image>
+			<image class='nextBtn' src='/imgs/next_pink.png'></image>
+			<slider backgroundColor='#FF8DBD' activeColor='#FF3489'></slider>
+		</view>
+		<view class='lightBox box'>
+			<view class='title'>灯光时间</view>
+			<view class='selectBox'>
+				<view class='bg' style="width: 300rpx"></view>
+				<view class='option'>
+					<text>15分钟</text>
+					<text>30分钟</text>
+					<text>45分钟</text>
+				</view>
+			</view>
+			<view class='title'>灯光强弱</view>
+			<slider backgroundColor='#FF8DBD' activeColor='#FF3489' max="3" bindchange='lightChange'></slider>
+		</view>
+		<view class='lightBox box'>
+			<view class='title'>摇摆时间</view>
+			<view class='selectBox'>
+				<view class='bg' style="width: 300rpx"></view>
+				<view class='option'>
+					<text>15分钟</text>
+					<text>30分钟</text>
+					<text>45分钟</text>
+				</view>
+			</view>
+			<view class='title'>摇摆速度</view>
+			<slider backgroundColor='#FF8DBD' activeColor='#FF3489' max="5"></slider>
+		</view>
+	</view>
+	<view class='label'>
+		<view class='icon'></view>
+		<text>灯光和摇摆需先打开档位，然后选择时间，如果没选择时间，则会一直保持打开状态</text>
+	</view>
+		<view class='menu'>
+			<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/configure/configure'>
+				<view class='menuTitle'>场景设置</view>
+				<view class='operate'>
+					<!-- <switch color='#44DB5E' catchtap='quickRun' /> -->
+					<image src='/imgs/moreIcon_pink.png'></image>
+				</view>
+			</view>
+			<view class='menuItem flexBox'>
+				<view class='menuTitle'>已连接设备</view>
+				<view class='operate'>
+					<image src='/imgs/moreIcon_pink.png'></image>
+				</view>
+			</view>
+			<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/healthData/healthData'>
+				<view class='menuTitle'>健康数据</view>
+				<view class='operate'>
+					<image src='/imgs/moreIcon_pink.png'></image>
+				</view>
+			</view>
+			<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/notice/notice'>
+				<view class='menuTitle'>消息提示</view>
+				<view class='operate'>
+					<image src='/imgs/moreIcon_pink.png'></image>
+				</view>
+			</view>
+			<view class='menuItem flexBox' bindtap='toPage' data-page-url='/pages/setting/setting'>
+				<view class='menuTitle'>设置</view>
+				<view class='operate'>
+					<image src='/imgs/moreIcon_pink.png'></image>
+				</view>
+			</view>
+		</view>
+</view>

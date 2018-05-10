@@ -1,0 +1,114 @@
+/* pages/configure/configure.wxss */
+.container{
+	padding: 0 26rpx;
+}
+.mainTitle{
+	font-size: 52rpx;
+	font-weight: bold;
+	margin-top: 10rpx;
+	margin-bottom: 60rpx;
+	width: 100%;
+}
+.section{
+	width: 100%;
+}
+.section .sectionTitle{
+	font-size: 32rpx;
+	color: #44DB5E;
+	margin-bottom: 36rpx;
+	font-weight: bold;
+}
+.sliderBox{
+	box-shadow: 0 0 20rpx 0 rgba(217, 217, 217, 0.5);
+	border-radius: 16rpx;
+	height: 88rpx;
+	line-height: 88rpx;
+	padding-left: 24rpx;
+	margin-bottom: 32rpx;
+}
+.sliderBox text{
+	font-size: 24rpx;
+}
+.sliderBox slider{
+	display: inline-block;
+	width: 526rpx;
+	margin: 0;
+	margin-left: 18rpx;
+	position: relative;
+	bottom: 9rpx;
+	left: 28rpx;
+}
+.wx-slider-handle{
+	width: 28rpx !important;
+	height: 28rpx !important;
+	position: relative;
+	top: 16rpx !important;
+}
+.menu{
+	padding-left: 0;
+	padding-bottom: 0;
+}
+.menuItem{
+	border-top: 1rpx solid #EFEFF4 !important;
+	border-bottom: 1rpx solid #EFEFF4 !important;
+}
+.menuItem .menuTitle{
+	padding-left: 24rpx;
+}
+.operate{
+	color: #C7C7CC;
+}
+.optionPane .header{
+	justify-content: space-between;
+}
+.optionPane .header .headerTitle{
+	font-size: 32rpx;
+	font-weight: bold;
+	padding:28rpx 36rpx 34rpx 24rpx;
+}
+.optionPane .header .operate{
+	font-size: 20rpx;
+}
+.optionBox{
+	display: flex;
+	width: 700rpx;
+	margin-bottom: 50rpx;
+}
+.optionBox .optionItem{
+	font-size: 26rpx;
+	width: calc(700rpx / 3);
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	color: #4E4E4E;
+	border: 1rpx solid #4E4E4E;
+}
+.optionBox .optionItem:first-child{
+	border-top-left-radius: 16rpx;
+	border-bottom-left-radius: 16rpx;
+}
+.optionBox .optionItem:last-child{
+	border-top-right-radius: 16rpx;
+	border-bottom-right-radius: 16rpx;
+}
+.optionBox .active{
+	background-color: #4D4D4D;
+	color: #fff;
+}
+.label{
+	font-size: 10px;
+	color: #6D6D6D;
+	padding-left: 24rpx;
+}
+.saveBtn{
+	font-size: 32rpx;
+	color: #FFF;
+	width: 700rpx;
+	height: 96rpx;
+	line-height: 96rpx;
+	text-align: center;
+	background: #6F6F6F;
+	border-radius: 16rpx;
+	margin-top: -28rpx;
+	margin-bottom: 18rpx;
+}

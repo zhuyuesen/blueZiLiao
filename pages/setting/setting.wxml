@@ -1,0 +1,53 @@
+<!--pages/setting/setting.wxml-->
+<view class='title'>语音提醒</view>
+<view class='menu'>
+	<view class='menuItem flexBox'>
+		<view class='menuTitle'>呼吸异常提醒</view>
+		<view class='operate'>
+			<switch color='#44DB5E' bindchange='' />
+		</view>
+	</view>
+	<view class='menuItem flexBox'>
+		<view class='menuTitle'>尿湿提醒</view>
+		<view class='operate'>
+			<switch color='#44DB5E' bindchange='setHumiditySwitch' checked = '{{ humiditySoundSwitch == "1" ? "checked" : "" }}' />
+		</view>
+	</view>
+	<view class='menuItem flexBox'>
+		<view class='menuTitle'>体温异常提醒</view>
+		<view class='operate'>
+			<switch color='#44DB5E' bindchange='setTempSwitch' checked = '{{ tempSoundSwitch == "1" ? "checked" : "" }}' />
+		</view>
+	</view>
+</view>
+<view class='label'>关闭这些功能之后系统将不再给您的手机发送推送消息 但是这些消息依然会
+出现到您的消息中心里边</view>
+<view class='title'>温度异常正常值
+	<view class='unit'>单位：摄氏度℃</view>
+</view>
+<view class='tempLimitControl'>
+	<view>
+		最小值：<input type='digit' value='{{ limitTempLow }}' bindinput="getLimitTempLow" bindblur="limitTempLowCheck" />
+	</view>
+	<view>
+		最大值：<input type='digit' value='{{ limitTempHigh }}' bindinput="getLimitTempHigh" bindblur="limitTempHighCheck" />
+	</view>
+</view>
+<view class='label'>您可以自动调节体温的正常值  在正常值范围之内不会进行体温报警</view>
+<!-- <view class='menu'>
+	<view class='menuItem flexBox'>
+		<view class='menuTitle'>哭声启动</view>
+		<view class='operate'>
+			<switch color='#44DB5E' catchtap='' />
+		</view>
+	</view>
+</view> -->
+
+<picker-view class='tempLimit' mask-style="background-color: #fff; ">
+	<picker-view-column>
+		<view wx:for="{{tempArr}}" wx:key="{{ item }}" style="line-height: 50px">{{item}}</view>
+	</picker-view-column>
+	<picker-view-column>
+		<view wx:for="{{tempArr}}" wx:key="{{ item }}" style="line-height: 50px">{{item}}</view>
+	</picker-view-column>
+</picker-view>

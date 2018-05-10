@@ -1,0 +1,61 @@
+/**index.wxss**/
+.noDevices{
+	font-size: 48rpx;
+	font-weight: bold;
+	margin: 362rpx auto;
+}
+
+.hasDevices{
+	width: 100%;
+}
+.historyConnectTitle{
+	font-size: 36rpx;
+	font-weight: bold;
+}
+
+.findNewDevices{
+	position: fixed;
+	width: 100%;
+	box-sizing: border-box;
+	bottom: 0;
+	left: 0;
+}
+.findNewDevices .label{
+	font-size: 36rpx;
+	text-align: center;
+	margin-bottom: 36rpx;
+}
+.findNewDevices .connectBtn{
+	width: 372rpx;
+	height: 98rpx;
+	background-color: rgba(248,203,85,1);
+	margin-bottom: 30rpx;
+	border-radius: 20rpx;
+}
+.findNewDevices .connectBtnHover{
+	background-color: rgba(248,203,85,0.8);
+}
+.findNewDevices .connectBtn image{
+	width: 38rpx;
+	height: 38rpx;
+	margin: 30rpx auto;
+}
+
+.searching{
+	margin-top: 316rpx;
+	text-align: center;
+}
+.searching image{
+	width: 32rpx;
+	height: 32rpx;
+	margin-bottom: 34rpx;
+	animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+	0%	{ transform:rotate(0deg); }
+	100%	{ transform:rotate(360deg); }
+}
+.searching .label{
+	font-size: 48rpx;
+	font-weight: bold;
+}
